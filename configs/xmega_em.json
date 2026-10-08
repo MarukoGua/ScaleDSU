@@ -1,0 +1,20 @@
+{
+    "start_channels": 16, 
+    "patch_size": 147, 
+    "embedding_pool": 12, 
+    "embedding_stride": 3, 
+    "encoder_depths": 1, 
+    "encoder_kernel": 49,
+    "encoder_pool_kernel": 50, 
+    "encoder_pool_stride": 50, 
+    "mlp_depths": 1, 
+    "mlp_widths": 128,
+    "num_experts": 4,
+    "expert_hidden_mult": 32, 
+    "dropout": 0.0, 
+    "hidden_act": "relu",
+    "lr": 3e-4,
+    "batch_size": 512,
+    "num_epoch": 200,
+    "use_scheduler": 0
+}
