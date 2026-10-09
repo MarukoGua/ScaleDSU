@@ -181,7 +181,7 @@ def profile(training_args):
         pbar.set_description(print_info)
         print_info += '\n'
 
-        # logging.info(print_info)
+        logging.info(print_info)
 
         better = valid_loss < best_loss
         if better:
@@ -191,7 +191,7 @@ def profile(training_args):
         else:
             counter += 1
         
-        if counter > 20:
+        if counter > 10:
             break
 
     # ============ RELEASE TRAIN-PHASE DATA MEMORY ============

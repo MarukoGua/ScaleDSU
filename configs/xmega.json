@@ -14,6 +14,6 @@
     "hidden_act": "elu",
     "lr": 3e-4,
     "batch_size": 512,
-    "num_epoch": 200,
+    "num_epoch": 100,
     "use_scheduler": 0
 }

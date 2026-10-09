@@ -36,7 +36,6 @@ class DropoutLayer(nn.Module):
     
     def forward(self, x, *args, **kwargs):
         if self.training and self.dropout > 0:
-            print('dropout!')
             return self.dropout_layer(x)
         return x
 
@@ -54,10 +53,8 @@ class AblationDSU(nn.Module):
         
         if perturbation == 'gaussian':
             perturb_func = GaussianNoiseLayer(float(level))
-            print(float(level))
         elif perturbation == 'dsu':
             perturb_func = DistributionUncertainty(uncertainty=bool(uncertainty), factor=int(factor))
-            print(bool(uncertainty), int(factor))
         elif perturbation == 'dropout':
             perturb_func = DropoutLayer(dropout=float(dropout))
         
@@ -159,7 +156,6 @@ class AblationDSU(nn.Module):
 
         aux_loss = 0.0
         ce_loss = 0.0
-
         if add_uncertainty:
             clean, noisy, aux_loss = self.dsu_scale(x, add_uncertainty)
             clean_ce_loss = self.ce_loss(clean, label)
@@ -175,7 +171,7 @@ class AblationDSU(nn.Module):
 class AblationInput(nn.Module):
     def __init__(self, config, perturbation, level, denser, uncertainty=1.0, factor=5.0, dropout=0.0):
         super().__init__() 
-
+    
         if perturbation == 'gaussian':
             perturb_func = GaussianNoiseLayer(float(level))
             print(float(level))
@@ -184,7 +180,7 @@ class AblationInput(nn.Module):
             print(bool(uncertainty), int(factor))
         elif perturbation == 'dropout':
             perturb_func = DropoutLayer(dropout=float(dropout))
-        
+
         self.perturb = perturb_func
         self.embedder = nn.Sequential(
             nn.Conv1d(1, config.start_channels, config.patch_size, stride=1, padding=(config.patch_size-1)//2),

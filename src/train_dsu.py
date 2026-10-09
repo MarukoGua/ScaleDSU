@@ -1,10 +1,7 @@
 import os
 import gc
-import copy
-import json
 import logging
 import argparse
-import re
 
 import torch
 import tqdm
@@ -273,10 +270,6 @@ if __name__ == "__main__":
 
     if not os.path.exists(args.output_dir):
         os.mkdir(args.output_dir)
-    output_dir = os.path.join(args.output_dir, 'dsu')
-    if not os.path.exists(output_dir):
-        os.mkdir(output_dir)
-    args.output_dir = output_dir
     
     setup_logging(args.output_dir)
 

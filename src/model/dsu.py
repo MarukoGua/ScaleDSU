@@ -37,7 +37,6 @@ class DistributionUncertainty(nn.Module):
     def forward(self, x, add_uncertainty=False):
         if (self.uncertainty == 0) or (add_uncertainty is False) or (not self.training):
             return x
-        print('add!')
         mean = x.mean(dim=-1, keepdim=False)
         std = (x.var(dim=-1, keepdim=False) + self.eps).sqrt()
 

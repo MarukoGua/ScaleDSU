@@ -1,0 +1,68 @@
+Epoch 0/100. Train loss=8.77136, assist loss=((8.4099, 0.36146)).Eval loss: 5.54494, acc: 0.00424 assist loss=[5.54494, 0.0].
+
+Epoch 1/100. Train loss=5.57989, assist loss=((5.55712, 0.02277)).Eval loss: 5.54473, acc: 0.00495 assist loss=[5.54473, 0.0].
+
+Epoch 2/100. Train loss=5.54377, assist loss=((5.52776, 0.01601)).Eval loss: 5.54469, acc: 0.00434 assist loss=[5.54469, 0.0].
+
+Epoch 3/100. Train loss=5.53539, assist loss=((5.52173, 0.01366)).Eval loss: 5.54467, acc: 0.00455 assist loss=[5.54467, 0.0].
+
+Epoch 4/100. Train loss=5.53139, assist loss=((5.51891, 0.01249)).Eval loss: 5.5446, acc: 0.00475 assist loss=[5.5446, 0.0].
+
+Epoch 5/100. Train loss=5.52898, assist loss=((5.51714, 0.01184)).Eval loss: 5.54449, acc: 0.00515 assist loss=[5.54449, 0.0].
+
+Epoch 6/100. Train loss=5.52714, assist loss=((5.51573, 0.01141)).Eval loss: 5.54439, acc: 0.00515 assist loss=[5.54439, 0.0].
+
+Epoch 7/100. Train loss=5.52613, assist loss=((5.515, 0.01113)).Eval loss: 5.54423, acc: 0.00505 assist loss=[5.54423, 0.0].
+
+Epoch 8/100. Train loss=5.52508, assist loss=((5.51414, 0.01094)).Eval loss: 5.54396, acc: 0.00556 assist loss=[5.54396, 0.0].
+
+Epoch 9/100. Train loss=5.52444, assist loss=((5.51363, 0.01081)).Eval loss: 5.54352, acc: 0.00576 assist loss=[5.54352, 0.0].
+
+Epoch 10/100. Train loss=5.52315, assist loss=((5.51243, 0.01072)).Eval loss: 5.54247, acc: 0.00525 assist loss=[5.54247, 0.0].
+
+Epoch 11/100. Train loss=5.5212, assist loss=((5.5105, 0.01069)).Eval loss: 5.54015, acc: 0.00586 assist loss=[5.54015, 0.0].
+
+Epoch 12/100. Train loss=5.51764, assist loss=((5.50698, 0.01065)).Eval loss: 5.53569, acc: 0.00606 assist loss=[5.53569, 0.0].
+
+Epoch 13/100. Train loss=5.5137, assist loss=((5.50306, 0.01064)).Eval loss: 5.53207, acc: 0.00646 assist loss=[5.53207, 0.0].
+
+Epoch 14/100. Train loss=5.51065, assist loss=((5.50004, 0.01061)).Eval loss: 5.53077, acc: 0.00616 assist loss=[5.53077, 0.0].
+
+Epoch 15/100. Train loss=5.50822, assist loss=((5.49762, 0.01059)).Eval loss: 5.53025, acc: 0.00657 assist loss=[5.53025, 0.0].
+
+Epoch 16/100. Train loss=5.50634, assist loss=((5.49575, 0.01058)).Eval loss: 5.53064, acc: 0.00586 assist loss=[5.53064, 0.0].
+
+Epoch 17/100. Train loss=5.5047, assist loss=((5.49412, 0.01058)).Eval loss: 5.53197, acc: 0.00586 assist loss=[5.53197, 0.0].
+
+Epoch 18/100. Train loss=5.50273, assist loss=((5.49214, 0.01058)).Eval loss: 5.53275, acc: 0.00606 assist loss=[5.53275, 0.0].
+
+Epoch 19/100. Train loss=5.5005, assist loss=((5.48991, 0.01058)).Eval loss: 5.53411, acc: 0.00576 assist loss=[5.53411, 0.0].
+
+Epoch 20/100. Train loss=5.49821, assist loss=((5.48762, 0.01059)).Eval loss: 5.53716, acc: 0.00566 assist loss=[5.53716, 0.0].
+
+Epoch 21/100. Train loss=5.49582, assist loss=((5.48522, 0.0106)).Eval loss: 5.53922, acc: 0.00535 assist loss=[5.53922, 0.0].
+
+Epoch 22/100. Train loss=5.49329, assist loss=((5.48268, 0.01061)).Eval loss: 5.5415, acc: 0.00596 assist loss=[5.5415, 0.0].
+
+Epoch 23/100. Train loss=5.49027, assist loss=((5.47963, 0.01064)).Eval loss: 5.54496, acc: 0.00596 assist loss=[5.54496, 0.0].
+
+Epoch 24/100. Train loss=5.4874, assist loss=((5.47674, 0.01066)).Eval loss: 5.54697, acc: 0.00576 assist loss=[5.54697, 0.0].
+
+Epoch 25/100. Train loss=5.48399, assist loss=((5.47331, 0.01069)).Eval loss: 5.5504, acc: 0.00576 assist loss=[5.5504, 0.0].
+
+Epoch 26/100. Train loss=5.47993, assist loss=((5.4692, 0.01073)).Eval loss: 5.55153, acc: 0.00545 assist loss=[5.55153, 0.0].
+
+Training finished. Releasing training data memory...
+[Attack] loading target 1 data...
+--------------Attack Results------------
+(tgt device)1: loss=5.5302, acc=0.0065656565656565654, NTGE=(381.65, 1167.0).
+
+[Attack] target 1 finished. Releasing its data memory...
+[Attack] loading target 2 data...
+(tgt device)2: loss=5.5275, acc=0.006060606060606061, NTGE=(336.14, 880.0).
+
+[Attack] target 2 finished. Releasing its data memory...
+[Attack] loading target 3 data...
+(tgt device)3: loss=5.5295, acc=0.005757575757575757, NTGE=(342.53, 959.0).
+
+[Attack] target 3 finished. Releasing its data memory...

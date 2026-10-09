@@ -1,0 +1,226 @@
+Epoch 0/150. Train loss=5.53639, assist loss=((5.52654, 0.00986)).Eval loss: 5.54532, acc: 0.0039 assist loss=[5.54532, 0.0].
+
+Epoch 1/150. Train loss=5.53598, assist loss=((5.52612, 0.00986)).Eval loss: 5.54545, acc: 0.00428 assist loss=[5.54545, 0.0].
+
+Epoch 2/150. Train loss=5.53541, assist loss=((5.52543, 0.00998)).Eval loss: 5.54482, acc: 0.00414 assist loss=[5.54482, 0.0].
+
+Epoch 3/150. Train loss=5.53163, assist loss=((5.52145, 0.01018)).Eval loss: 5.53835, acc: 0.00496 assist loss=[5.53835, 0.0].
+
+Epoch 4/150. Train loss=5.522, assist loss=((5.51154, 0.01045)).Eval loss: 5.52643, acc: 0.00526 assist loss=[5.52643, 0.0].
+
+Epoch 5/150. Train loss=5.50855, assist loss=((5.49799, 0.01056)).Eval loss: 5.51175, acc: 0.00642 assist loss=[5.51175, 0.0].
+
+Epoch 6/150. Train loss=5.49436, assist loss=((5.48363, 0.01073)).Eval loss: 5.50146, acc: 0.00574 assist loss=[5.50146, 0.0].
+
+Epoch 7/150. Train loss=5.48388, assist loss=((5.47308, 0.01081)).Eval loss: 5.49698, acc: 0.00626 assist loss=[5.49698, 0.0].
+
+Epoch 8/150. Train loss=5.47445, assist loss=((5.46364, 0.01081)).Eval loss: 5.49013, acc: 0.00648 assist loss=[5.49013, 0.0].
+
+Epoch 9/150. Train loss=5.46782, assist loss=((5.45693, 0.01089)).Eval loss: 5.48243, acc: 0.00694 assist loss=[5.48243, 0.0].
+
+Epoch 10/150. Train loss=5.46158, assist loss=((5.4507, 0.01088)).Eval loss: 5.49244, acc: 0.00666 assist loss=[5.49244, 0.0].
+
+Epoch 11/150. Train loss=5.45561, assist loss=((5.4447, 0.01091)).Eval loss: 5.4824, acc: 0.00692 assist loss=[5.4824, 0.0].
+
+Epoch 12/150. Train loss=5.45324, assist loss=((5.44233, 0.01091)).Eval loss: 5.47454, acc: 0.00702 assist loss=[5.47454, 0.0].
+
+Epoch 13/150. Train loss=5.44803, assist loss=((5.43715, 0.01088)).Eval loss: 5.47083, acc: 0.00688 assist loss=[5.47083, 0.0].
+
+Epoch 14/150. Train loss=5.44576, assist loss=((5.43486, 0.0109)).Eval loss: 5.47126, acc: 0.00756 assist loss=[5.47126, 0.0].
+
+Epoch 15/150. Train loss=5.44156, assist loss=((5.43063, 0.01093)).Eval loss: 5.46633, acc: 0.00744 assist loss=[5.46633, 0.0].
+
+Epoch 16/150. Train loss=5.43918, assist loss=((5.42823, 0.01096)).Eval loss: 5.4799, acc: 0.00672 assist loss=[5.4799, 0.0].
+
+Epoch 17/150. Train loss=5.43627, assist loss=((5.42529, 0.01098)).Eval loss: 5.46171, acc: 0.0076 assist loss=[5.46171, 0.0].
+
+Epoch 18/150. Train loss=5.43394, assist loss=((5.42296, 0.01098)).Eval loss: 5.46076, acc: 0.00772 assist loss=[5.46076, 0.0].
+
+Epoch 19/150. Train loss=5.43013, assist loss=((5.41912, 0.011)).Eval loss: 5.46193, acc: 0.00746 assist loss=[5.46193, 0.0].
+
+Epoch 20/150. Train loss=5.42853, assist loss=((5.41752, 0.01102)).Eval loss: 5.46225, acc: 0.00772 assist loss=[5.46225, 0.0].
+
+Epoch 21/150. Train loss=5.42554, assist loss=((5.41452, 0.01102)).Eval loss: 5.45713, acc: 0.00736 assist loss=[5.45713, 0.0].
+
+Epoch 22/150. Train loss=5.42226, assist loss=((5.41122, 0.01104)).Eval loss: 5.46591, acc: 0.00746 assist loss=[5.46591, 0.0].
+
+Epoch 23/150. Train loss=5.42275, assist loss=((5.41171, 0.01103)).Eval loss: 5.46195, acc: 0.0076 assist loss=[5.46195, 0.0].
+
+Epoch 24/150. Train loss=5.42142, assist loss=((5.41041, 0.01101)).Eval loss: 5.46642, acc: 0.00728 assist loss=[5.46642, 0.0].
+
+Epoch 25/150. Train loss=5.41833, assist loss=((5.40731, 0.01103)).Eval loss: 5.46086, acc: 0.00794 assist loss=[5.46086, 0.0].
+
+Epoch 26/150. Train loss=5.4167, assist loss=((5.40565, 0.01105)).Eval loss: 5.45456, acc: 0.008 assist loss=[5.45456, 0.0].
+
+Epoch 27/150. Train loss=5.41388, assist loss=((5.40283, 0.01105)).Eval loss: 5.45382, acc: 0.00758 assist loss=[5.45382, 0.0].
+
+Epoch 28/150. Train loss=5.41192, assist loss=((5.40086, 0.01106)).Eval loss: 5.45451, acc: 0.00818 assist loss=[5.45451, 0.0].
+
+Epoch 29/150. Train loss=5.41044, assist loss=((5.39937, 0.01107)).Eval loss: 5.45727, acc: 0.00788 assist loss=[5.45727, 0.0].
+
+Epoch 30/150. Train loss=5.40818, assist loss=((5.3971, 0.01108)).Eval loss: 5.44153, acc: 0.0079 assist loss=[5.44153, 0.0].
+
+Epoch 31/150. Train loss=5.40654, assist loss=((5.39545, 0.01109)).Eval loss: 5.44891, acc: 0.00804 assist loss=[5.44891, 0.0].
+
+Epoch 32/150. Train loss=5.4046, assist loss=((5.39351, 0.01109)).Eval loss: 5.44062, acc: 0.00788 assist loss=[5.44062, 0.0].
+
+Epoch 33/150. Train loss=5.40309, assist loss=((5.39199, 0.0111)).Eval loss: 5.44019, acc: 0.00786 assist loss=[5.44019, 0.0].
+
+Epoch 34/150. Train loss=5.40271, assist loss=((5.3916, 0.01112)).Eval loss: 5.4532, acc: 0.00746 assist loss=[5.4532, 0.0].
+
+Epoch 35/150. Train loss=5.4012, assist loss=((5.39008, 0.01112)).Eval loss: 5.43927, acc: 0.00812 assist loss=[5.43927, 0.0].
+
+Epoch 36/150. Train loss=5.39824, assist loss=((5.38709, 0.01115)).Eval loss: 5.44054, acc: 0.00814 assist loss=[5.44054, 0.0].
+
+Epoch 37/150. Train loss=5.39775, assist loss=((5.38663, 0.01112)).Eval loss: 5.4494, acc: 0.00752 assist loss=[5.4494, 0.0].
+
+Epoch 38/150. Train loss=5.39646, assist loss=((5.38532, 0.01114)).Eval loss: 5.43375, acc: 0.00772 assist loss=[5.43375, 0.0].
+
+Epoch 39/150. Train loss=5.39506, assist loss=((5.38392, 0.01114)).Eval loss: 5.43633, acc: 0.00796 assist loss=[5.43633, 0.0].
+
+Epoch 40/150. Train loss=5.39468, assist loss=((5.38352, 0.01116)).Eval loss: 5.43819, acc: 0.00742 assist loss=[5.43819, 0.0].
+
+Epoch 41/150. Train loss=5.39147, assist loss=((5.3803, 0.01117)).Eval loss: 5.43751, acc: 0.0074 assist loss=[5.43751, 0.0].
+
+Epoch 42/150. Train loss=5.39254, assist loss=((5.38137, 0.01117)).Eval loss: 5.4341, acc: 0.00814 assist loss=[5.4341, 0.0].
+
+Epoch 43/150. Train loss=5.38941, assist loss=((5.37824, 0.01117)).Eval loss: 5.43294, acc: 0.0078 assist loss=[5.43294, 0.0].
+
+Epoch 44/150. Train loss=5.38656, assist loss=((5.37536, 0.01119)).Eval loss: 5.42836, acc: 0.00782 assist loss=[5.42836, 0.0].
+
+Epoch 45/150. Train loss=5.38591, assist loss=((5.37472, 0.01119)).Eval loss: 5.43041, acc: 0.00798 assist loss=[5.43041, 0.0].
+
+Epoch 46/150. Train loss=5.38828, assist loss=((5.3771, 0.01118)).Eval loss: 5.42932, acc: 0.008 assist loss=[5.42932, 0.0].
+
+Epoch 47/150. Train loss=5.38597, assist loss=((5.37477, 0.01121)).Eval loss: 5.42458, acc: 0.0084 assist loss=[5.42458, 0.0].
+
+Epoch 48/150. Train loss=5.38328, assist loss=((5.37208, 0.0112)).Eval loss: 5.43115, acc: 0.00798 assist loss=[5.43115, 0.0].
+
+Epoch 49/150. Train loss=5.38134, assist loss=((5.37012, 0.01122)).Eval loss: 5.42862, acc: 0.00798 assist loss=[5.42862, 0.0].
+
+Epoch 50/150. Train loss=5.38095, assist loss=((5.36972, 0.01123)).Eval loss: 5.43474, acc: 0.00826 assist loss=[5.43474, 0.0].
+
+Epoch 51/150. Train loss=5.37812, assist loss=((5.36689, 0.01124)).Eval loss: 5.42601, acc: 0.00836 assist loss=[5.42601, 0.0].
+
+Epoch 52/150. Train loss=5.3776, assist loss=((5.36635, 0.01125)).Eval loss: 5.42832, acc: 0.00854 assist loss=[5.42832, 0.0].
+
+Epoch 53/150. Train loss=5.37515, assist loss=((5.36389, 0.01126)).Eval loss: 5.42189, acc: 0.00822 assist loss=[5.42189, 0.0].
+
+Epoch 54/150. Train loss=5.37554, assist loss=((5.36428, 0.01126)).Eval loss: 5.43368, acc: 0.00776 assist loss=[5.43368, 0.0].
+
+Epoch 55/150. Train loss=5.37625, assist loss=((5.36499, 0.01126)).Eval loss: 5.42044, acc: 0.0075 assist loss=[5.42044, 0.0].
+
+Epoch 56/150. Train loss=5.3739, assist loss=((5.36262, 0.01128)).Eval loss: 5.42054, acc: 0.00816 assist loss=[5.42054, 0.0].
+
+Epoch 57/150. Train loss=5.37139, assist loss=((5.3601, 0.01129)).Eval loss: 5.41577, acc: 0.00844 assist loss=[5.41577, 0.0].
+
+Epoch 58/150. Train loss=5.37261, assist loss=((5.36132, 0.01129)).Eval loss: 5.41615, acc: 0.00882 assist loss=[5.41615, 0.0].
+
+Epoch 59/150. Train loss=5.37036, assist loss=((5.35905, 0.0113)).Eval loss: 5.42, acc: 0.00804 assist loss=[5.42, 0.0].
+
+Epoch 60/150. Train loss=5.36828, assist loss=((5.35694, 0.01134)).Eval loss: 5.41752, acc: 0.00812 assist loss=[5.41752, 0.0].
+
+Epoch 61/150. Train loss=5.36718, assist loss=((5.35584, 0.01134)).Eval loss: 5.41587, acc: 0.0081 assist loss=[5.41587, 0.0].
+
+Epoch 62/150. Train loss=5.36834, assist loss=((5.35704, 0.01131)).Eval loss: 5.41565, acc: 0.0087 assist loss=[5.41565, 0.0].
+
+Epoch 63/150. Train loss=5.36413, assist loss=((5.35279, 0.01134)).Eval loss: 5.41135, acc: 0.0085 assist loss=[5.41135, 0.0].
+
+Epoch 64/150. Train loss=5.36465, assist loss=((5.3533, 0.01135)).Eval loss: 5.41916, acc: 0.0084 assist loss=[5.41916, 0.0].
+
+Epoch 65/150. Train loss=5.36402, assist loss=((5.35266, 0.01135)).Eval loss: 5.41148, acc: 0.00862 assist loss=[5.41148, 0.0].
+
+Epoch 66/150. Train loss=5.3628, assist loss=((5.35145, 0.01136)).Eval loss: 5.4163, acc: 0.0088 assist loss=[5.4163, 0.0].
+
+Epoch 67/150. Train loss=5.36152, assist loss=((5.35012, 0.0114)).Eval loss: 5.42733, acc: 0.00832 assist loss=[5.42733, 0.0].
+
+Epoch 68/150. Train loss=5.35957, assist loss=((5.34816, 0.01141)).Eval loss: 5.40947, acc: 0.00896 assist loss=[5.40947, 0.0].
+
+Epoch 69/150. Train loss=5.35906, assist loss=((5.34766, 0.0114)).Eval loss: 5.41199, acc: 0.00934 assist loss=[5.41199, 0.0].
+
+Epoch 70/150. Train loss=5.35973, assist loss=((5.34833, 0.01139)).Eval loss: 5.40737, acc: 0.00886 assist loss=[5.40737, 0.0].
+
+Epoch 71/150. Train loss=5.35657, assist loss=((5.34515, 0.01143)).Eval loss: 5.40891, acc: 0.00854 assist loss=[5.40891, 0.0].
+
+Epoch 72/150. Train loss=5.35619, assist loss=((5.34477, 0.01142)).Eval loss: 5.41129, acc: 0.0084 assist loss=[5.41129, 0.0].
+
+Epoch 73/150. Train loss=5.35608, assist loss=((5.34462, 0.01145)).Eval loss: 5.41004, acc: 0.00818 assist loss=[5.41004, 0.0].
+
+Epoch 74/150. Train loss=5.35503, assist loss=((5.34358, 0.01145)).Eval loss: 5.40831, acc: 0.00858 assist loss=[5.40831, 0.0].
+
+Epoch 75/150. Train loss=5.35703, assist loss=((5.34559, 0.01144)).Eval loss: 5.41848, acc: 0.0088 assist loss=[5.41848, 0.0].
+
+Epoch 76/150. Train loss=5.3551, assist loss=((5.34365, 0.01144)).Eval loss: 5.41146, acc: 0.00862 assist loss=[5.41146, 0.0].
+
+Epoch 77/150. Train loss=5.35191, assist loss=((5.34045, 0.01147)).Eval loss: 5.41338, acc: 0.00806 assist loss=[5.41338, 0.0].
+
+Epoch 78/150. Train loss=5.35104, assist loss=((5.33958, 0.01146)).Eval loss: 5.40982, acc: 0.00816 assist loss=[5.40982, 0.0].
+
+Epoch 79/150. Train loss=5.35241, assist loss=((5.34094, 0.01147)).Eval loss: 5.41866, acc: 0.00836 assist loss=[5.41866, 0.0].
+
+Epoch 80/150. Train loss=5.35163, assist loss=((5.34016, 0.01147)).Eval loss: 5.40481, acc: 0.00912 assist loss=[5.40481, 0.0].
+
+Epoch 81/150. Train loss=5.35081, assist loss=((5.33933, 0.01148)).Eval loss: 5.40702, acc: 0.00882 assist loss=[5.40702, 0.0].
+
+Epoch 82/150. Train loss=5.34811, assist loss=((5.33662, 0.01149)).Eval loss: 5.40754, acc: 0.00862 assist loss=[5.40754, 0.0].
+
+Epoch 83/150. Train loss=5.35015, assist loss=((5.33867, 0.01148)).Eval loss: 5.40881, acc: 0.00834 assist loss=[5.40881, 0.0].
+
+Epoch 84/150. Train loss=5.34934, assist loss=((5.33783, 0.01151)).Eval loss: 5.39999, acc: 0.00828 assist loss=[5.39999, 0.0].
+
+Epoch 85/150. Train loss=5.34784, assist loss=((5.33633, 0.01151)).Eval loss: 5.40876, acc: 0.00814 assist loss=[5.40876, 0.0].
+
+Epoch 86/150. Train loss=5.34857, assist loss=((5.33706, 0.01151)).Eval loss: 5.40479, acc: 0.0088 assist loss=[5.40479, 0.0].
+
+Epoch 87/150. Train loss=5.34581, assist loss=((5.33429, 0.01152)).Eval loss: 5.4114, acc: 0.0084 assist loss=[5.4114, 0.0].
+
+Epoch 88/150. Train loss=5.34648, assist loss=((5.33493, 0.01154)).Eval loss: 5.40855, acc: 0.00882 assist loss=[5.40855, 0.0].
+
+Epoch 89/150. Train loss=5.34631, assist loss=((5.33478, 0.01153)).Eval loss: 5.40029, acc: 0.00886 assist loss=[5.40029, 0.0].
+
+Epoch 90/150. Train loss=5.34575, assist loss=((5.33422, 0.01153)).Eval loss: 5.40304, acc: 0.00928 assist loss=[5.40304, 0.0].
+
+Epoch 91/150. Train loss=5.3457, assist loss=((5.33414, 0.01156)).Eval loss: 5.41397, acc: 0.00878 assist loss=[5.41397, 0.0].
+
+Epoch 92/150. Train loss=5.34254, assist loss=((5.33099, 0.01155)).Eval loss: 5.39954, acc: 0.00822 assist loss=[5.39954, 0.0].
+
+Epoch 93/150. Train loss=5.34344, assist loss=((5.33187, 0.01158)).Eval loss: 5.45815, acc: 0.009 assist loss=[5.45815, 0.0].
+
+Epoch 94/150. Train loss=5.34313, assist loss=((5.33157, 0.01155)).Eval loss: 5.40499, acc: 0.00816 assist loss=[5.40499, 0.0].
+
+Epoch 95/150. Train loss=5.34352, assist loss=((5.33198, 0.01155)).Eval loss: 5.42189, acc: 0.00842 assist loss=[5.42189, 0.0].
+
+Epoch 96/150. Train loss=5.34094, assist loss=((5.32936, 0.01158)).Eval loss: 5.40237, acc: 0.00854 assist loss=[5.40237, 0.0].
+
+Epoch 97/150. Train loss=5.33918, assist loss=((5.32758, 0.0116)).Eval loss: 5.41099, acc: 0.00844 assist loss=[5.41099, 0.0].
+
+Epoch 98/150. Train loss=5.34175, assist loss=((5.33016, 0.01159)).Eval loss: 5.39958, acc: 0.00842 assist loss=[5.39958, 0.0].
+
+Epoch 99/150. Train loss=5.33929, assist loss=((5.32769, 0.0116)).Eval loss: 5.40364, acc: 0.00826 assist loss=[5.40364, 0.0].
+
+Epoch 100/150. Train loss=5.34099, assist loss=((5.32939, 0.0116)).Eval loss: 5.40099, acc: 0.00824 assist loss=[5.40099, 0.0].
+
+Epoch 101/150. Train loss=5.33886, assist loss=((5.32725, 0.01161)).Eval loss: 5.41192, acc: 0.00806 assist loss=[5.41192, 0.0].
+
+Epoch 102/150. Train loss=5.33745, assist loss=((5.32582, 0.01163)).Eval loss: 5.4146, acc: 0.00724 assist loss=[5.4146, 0.0].
+
+Epoch 103/150. Train loss=5.33822, assist loss=((5.32658, 0.01164)).Eval loss: 5.43763, acc: 0.00734 assist loss=[5.43763, 0.0].
+
+Training finished. Releasing training data memory...
+[Attack] loading target D1 data...
+--------------Attack Results------------
+(tgt device)D1: loss=5.3929, acc=0.0088, NTGE=(33.05, 136.0).
+
+[Attack] target D1 finished. Releasing its data memory...
+[Attack] loading target D2 data...
+(tgt device)D2: loss=5.4555, acc=0.008, NTGE=(54.44, 145.0).
+
+[Attack] target D2 finished. Releasing its data memory...
+[Attack] loading target D3 data...
+(tgt device)D3: loss=5.4672, acc=0.00738, NTGE=(53.33, 168.0).
+
+[Attack] target D3 finished. Releasing its data memory...
+[Attack] loading target D4 data...
+(tgt device)D4: loss=5.4966, acc=0.00728, NTGE=(60.75, 170.0).
+
+[Attack] target D4 finished. Releasing its data memory...

@@ -1,0 +1,118 @@
+Epoch 0/200. Train loss=5.44349, assist loss=((5.4328, 0.01069)).Eval loss: 5.53748, acc: 0.0054 assist loss=[5.53748, 0.0].
+
+Epoch 1/200. Train loss=5.38522, assist loss=((5.37484, 0.01038)).Eval loss: 5.37112, acc: 0.017 assist loss=[5.37112, 0.0].
+
+Epoch 2/200. Train loss=5.09004, assist loss=((5.07947, 0.01057)).Eval loss: 4.89556, acc: 0.0394 assist loss=[4.89556, 0.0].
+
+Epoch 3/200. Train loss=4.60886, assist loss=((4.59812, 0.01074)).Eval loss: 4.40768, acc: 0.0626 assist loss=[4.40768, 0.0].
+
+Epoch 4/200. Train loss=4.24521, assist loss=((4.23421, 0.011)).Eval loss: 4.11984, acc: 0.0851 assist loss=[4.11984, 0.0].
+
+Epoch 5/200. Train loss=3.95438, assist loss=((3.94281, 0.01157)).Eval loss: 3.86942, acc: 0.1061 assist loss=[3.86942, 0.0].
+
+Epoch 6/200. Train loss=3.71802, assist loss=((3.70548, 0.01254)).Eval loss: 3.68113, acc: 0.1301 assist loss=[3.68113, 0.0].
+
+Epoch 7/200. Train loss=3.53807, assist loss=((3.52465, 0.01342)).Eval loss: 3.51208, acc: 0.1444 assist loss=[3.51208, 0.0].
+
+Epoch 8/200. Train loss=3.39597, assist loss=((3.38176, 0.01421)).Eval loss: 3.39516, acc: 0.1665 assist loss=[3.39516, 0.0].
+
+Epoch 9/200. Train loss=3.27614, assist loss=((3.26127, 0.01486)).Eval loss: 3.2928, acc: 0.1772 assist loss=[3.2928, 0.0].
+
+Epoch 10/200. Train loss=3.16509, assist loss=((3.1495, 0.01559)).Eval loss: 3.20532, acc: 0.1938 assist loss=[3.20532, 0.0].
+
+Epoch 11/200. Train loss=3.07091, assist loss=((3.05485, 0.01606)).Eval loss: 3.14057, acc: 0.202 assist loss=[3.14057, 0.0].
+
+Epoch 12/200. Train loss=2.99454, assist loss=((2.97772, 0.01682)).Eval loss: 3.09514, acc: 0.208 assist loss=[3.09514, 0.0].
+
+Epoch 13/200. Train loss=2.9167, assist loss=((2.89943, 0.01727)).Eval loss: 3.03152, acc: 0.2191 assist loss=[3.03152, 0.0].
+
+Epoch 14/200. Train loss=2.84708, assist loss=((2.82957, 0.01751)).Eval loss: 3.00796, acc: 0.2251 assist loss=[3.00796, 0.0].
+
+Epoch 15/200. Train loss=2.79702, assist loss=((2.77943, 0.01759)).Eval loss: 2.96327, acc: 0.228 assist loss=[2.96327, 0.0].
+
+Epoch 16/200. Train loss=2.73602, assist loss=((2.71811, 0.01791)).Eval loss: 2.93444, acc: 0.2354 assist loss=[2.93444, 0.0].
+
+Epoch 17/200. Train loss=2.69494, assist loss=((2.67693, 0.01801)).Eval loss: 2.93049, acc: 0.24 assist loss=[2.93049, 0.0].
+
+Epoch 18/200. Train loss=2.65002, assist loss=((2.63187, 0.01815)).Eval loss: 2.89152, acc: 0.241 assist loss=[2.89152, 0.0].
+
+Epoch 19/200. Train loss=2.60889, assist loss=((2.59053, 0.01837)).Eval loss: 2.8607, acc: 0.2515 assist loss=[2.8607, 0.0].
+
+Epoch 20/200. Train loss=2.56844, assist loss=((2.55024, 0.0182)).Eval loss: 2.84777, acc: 0.25 assist loss=[2.84777, 0.0].
+
+Epoch 21/200. Train loss=2.53008, assist loss=((2.51165, 0.01843)).Eval loss: 2.83112, acc: 0.2597 assist loss=[2.83112, 0.0].
+
+Epoch 22/200. Train loss=2.4951, assist loss=((2.47654, 0.01856)).Eval loss: 2.82553, acc: 0.2557 assist loss=[2.82553, 0.0].
+
+Epoch 23/200. Train loss=2.46322, assist loss=((2.44449, 0.01873)).Eval loss: 2.83172, acc: 0.2576 assist loss=[2.83172, 0.0].
+
+Epoch 24/200. Train loss=2.42896, assist loss=((2.41015, 0.01882)).Eval loss: 2.79317, acc: 0.264 assist loss=[2.79317, 0.0].
+
+Epoch 25/200. Train loss=2.39915, assist loss=((2.38016, 0.01899)).Eval loss: 2.8147, acc: 0.2603 assist loss=[2.8147, 0.0].
+
+Epoch 26/200. Train loss=2.36829, assist loss=((2.34925, 0.01904)).Eval loss: 2.7964, acc: 0.263 assist loss=[2.7964, 0.0].
+
+Epoch 27/200. Train loss=2.3424, assist loss=((2.3232, 0.0192)).Eval loss: 2.80187, acc: 0.2626 assist loss=[2.80187, 0.0].
+
+Epoch 28/200. Train loss=2.31498, assist loss=((2.29567, 0.01931)).Eval loss: 2.8041, acc: 0.2623 assist loss=[2.8041, 0.0].
+
+Epoch 29/200. Train loss=2.28354, assist loss=((2.26418, 0.01936)).Eval loss: 2.80205, acc: 0.2666 assist loss=[2.80205, 0.0].
+
+Epoch 30/200. Train loss=2.25638, assist loss=((2.2369, 0.01948)).Eval loss: 2.78209, acc: 0.2682 assist loss=[2.78209, 0.0].
+
+Epoch 31/200. Train loss=2.22116, assist loss=((2.2016, 0.01955)).Eval loss: 2.7976, acc: 0.2664 assist loss=[2.7976, 0.0].
+
+Epoch 32/200. Train loss=2.19829, assist loss=((2.17848, 0.01981)).Eval loss: 2.82771, acc: 0.2617 assist loss=[2.82771, 0.0].
+
+Epoch 33/200. Train loss=2.16825, assist loss=((2.14829, 0.01996)).Eval loss: 2.8033, acc: 0.2694 assist loss=[2.8033, 0.0].
+
+Epoch 34/200. Train loss=2.14826, assist loss=((2.12803, 0.02023)).Eval loss: 2.8161, acc: 0.2644 assist loss=[2.8161, 0.0].
+
+Epoch 35/200. Train loss=2.11674, assist loss=((2.09637, 0.02037)).Eval loss: 2.84224, acc: 0.2671 assist loss=[2.84224, 0.0].
+
+Epoch 36/200. Train loss=2.08401, assist loss=((2.06358, 0.02044)).Eval loss: 2.81665, acc: 0.2673 assist loss=[2.81665, 0.0].
+
+Epoch 37/200. Train loss=2.06024, assist loss=((2.03947, 0.02077)).Eval loss: 2.85716, acc: 0.2664 assist loss=[2.85716, 0.0].
+
+Epoch 38/200. Train loss=2.02836, assist loss=((2.00764, 0.02072)).Eval loss: 2.85075, acc: 0.2703 assist loss=[2.85075, 0.0].
+
+Epoch 39/200. Train loss=2.00282, assist loss=((1.98173, 0.02109)).Eval loss: 2.89485, acc: 0.2635 assist loss=[2.89485, 0.0].
+
+Epoch 40/200. Train loss=1.97835, assist loss=((1.95705, 0.0213)).Eval loss: 2.88065, acc: 0.262 assist loss=[2.88065, 0.0].
+
+Epoch 41/200. Train loss=1.95167, assist loss=((1.93008, 0.02159)).Eval loss: 2.93599, acc: 0.2551 assist loss=[2.93599, 0.0].
+
+Training finished. Releasing training data memory...
+[Attack] loading target 01 data...
+--------------Attack Results------------
+(tgt device)01: loss=2.7823, acc=0.2684, NTGE=(2.42, 6.0).
+
+[Attack] target 01 finished. Releasing its data memory...
+[Attack] loading target 02 data...
+(tgt device)02: loss=4.9605, acc=0.0797, NTGE=(5.95, 16.0).
+
+[Attack] target 02 finished. Releasing its data memory...
+[Attack] loading target 03 data...
+(tgt device)03: loss=4.2412, acc=0.1188, NTGE=(4.45, 18.0).
+
+[Attack] target 03 finished. Releasing its data memory...
+[Attack] loading target 04 data...
+(tgt device)04: loss=9.6825, acc=0.0156, NTGE=(45.13, 177.0).
+
+[Attack] target 04 finished. Releasing its data memory...
+[Attack] loading target 05 data...
+(tgt device)05: loss=5.2807, acc=0.0732, NTGE=(6.87, 21.0).
+
+[Attack] target 05 finished. Releasing its data memory...
+[Attack] loading target 06 data...
+(tgt device)06: loss=4.6166, acc=0.1039, NTGE=(5.11, 20.0).
+
+[Attack] target 06 finished. Releasing its data memory...
+[Attack] loading target 07 data...
+(tgt device)07: loss=5.0279, acc=0.0862, NTGE=(6.96, 28.0).
+
+[Attack] target 07 finished. Releasing its data memory...
+[Attack] loading target 08 data...
+(tgt device)08: loss=3.9526, acc=0.1478, NTGE=(3.93, 13.0).
+
+[Attack] target 08 finished. Releasing its data memory...
