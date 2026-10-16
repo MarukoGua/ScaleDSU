@@ -21,18 +21,18 @@ AES_Sbox = np.array([
 ])
 
 
-def compute_metrics(evaluate_output, dataset, nb_attack, nb_trace, compute_ge=True):
+def compute_metrics(evaluate_output, dataset, nb_attack, nb_trace):
     predictions = evaluate_output['entropy']
     if nb_trace == -1:
         nb_trace = predictions.shape[0]
     all_rk_evol = np.zeros((nb_attack, nb_trace))
     
-
     target_byte = dataset.target_byte
     real_key = dataset.meta[0]['key'][target_byte]
     nb_hyp = predictions.shape[1]
     
     bar = tqdm.tqdm(range(nb_attack), total=nb_attack)
+    
     for i in bar:
         indices = np.random.choice(np.arange(predictions.shape[0]), size=nb_trace, replace=False)
         _sample = predictions[indices, :]
@@ -57,12 +57,13 @@ def compute_metrics(evaluate_output, dataset, nb_attack, nb_trace, compute_ge=Tr
             else:
                 trace_needed[line] = last_not_zero_idx + 2
     
-    avg_trace_needed = trace_needed.mean(axis=0)
+    avg_trace_needed = trace_needed.mean(axis=0)[0]
+    max_trace_needed = trace_needed.max(axis=0)[0]
     
     metrics = {
         'accuracy': round(evaluate_output['accuracy'], 4),
         'loss': round(evaluate_output['loss'], 4),
-        'trace_needed': (avg_trace_needed[0], trace_needed.max(axis=0)[0]),
+        'trace_needed': (avg_trace_needed, max_trace_needed),
         'all_attack_rank': np.array(all_rk_evol, dtype=int),
     }
     return metrics

@@ -12,15 +12,11 @@ class GaussianNoiseLayer(nn.Module):
     def __init__(self, noise_level=0.1, **kwargs):
         """
         Gaussian noise injection
-        :param noise_level: level of noise injected。
-        :param adaptive: 是否自适应输入特征的幅度。
         """
         super(GaussianNoiseLayer, self).__init__()
         self.noise_level = noise_level
 
     def forward(self, x, *args, **kwargs):
-        # nn.Module 自带 self.training 属性。
-        # 当模型执行 model.eval() 时，此处的 self.training 会自动变为 False，从而安全地跳过噪声注入
         if self.training and self.noise_level > 0:
             noise = torch.randn_like(x)
             return (1-self.noise_level) * x + self.noise_level * noise

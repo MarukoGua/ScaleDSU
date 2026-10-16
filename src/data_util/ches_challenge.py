@@ -141,7 +141,7 @@ def load_ches_challenge_from_file(file, keys, n_train=None, n_test=None):
     return train, test
     
 
-def load_ches_challenge(args, mode, n_train=100_000, n_test=100_000, is_cdpa=False, tgts=None):
+def load_ches_challenge(args, mode, n_train=100_000, n_test=100_000):
     file = args.data_file
     src_file = f'{file}/CHES_Challenge.h5'
     tgt_file = f'{file}/CHES_Challenge_evaluation.h5'
@@ -162,18 +162,11 @@ def load_ches_challenge(args, mode, n_train=100_000, n_test=100_000, is_cdpa=Fal
 
     elif mode == 'test':
         tgt_datasets = dict()
-        tgts = args.targets.split(',') if tgts is None else tgts
+        tgts = args.targets.split(',')
         if '0' in tgts:
             keys = [ATTACK_TRACES, ATTACK_META]
             _, tgt_data = load_ches_challenge_from_file(src_file, keys, n_test=n_test)
-            if is_cdpa:
-                n=100
-                X, Y, meta = tgt_data
-                val_tune = CHESChallengeDataset(X[:n], Y[:n], meta[:n], target_byte=args.target_byte)
-                val_test = CHESChallengeDataset(X[n:], Y[n:], meta[n:], target_byte=args.target_byte)
-                tgt_datasets['tgt-0'] = (val_tune, val_test)
-            else:
-                tgt_datasets['tgt-0'] = CHESChallengeDataset(*tgt_data, target_byte=args.target_byte)
+            tgt_datasets['tgt-0'] = CHESChallengeDataset(*tgt_data, target_byte=args.target_byte)
             # tgts.remove('0')
 
         for tgt in tgts:
@@ -181,14 +174,7 @@ def load_ches_challenge(args, mode, n_train=100_000, n_test=100_000, is_cdpa=Fal
                 continue
             keys = [EVALUATION_TRACES(tgt), EVALUATION_META(tgt)]
             _, tgt_data = load_ches_challenge_from_file(tgt_file, keys, n_test=n_test)
-            if is_cdpa:
-                n=100
-                X, Y, meta = tgt_data
-                val_tune = CHESChallengeDataset(X[:n], Y[:n], meta[:n], target_byte=args.target_byte)
-                val_test = CHESChallengeDataset(X[n:], Y[n:], meta[n:], target_byte=args.target_byte)
-                tgt_datasets[f'tgt-{tgt}'] = (val_tune, val_test)
-            else:
-                tgt_datasets[f'tgt-{tgt}'] = CHESChallengeDataset(*tgt_data, target_byte=args.target_byte)
+            tgt_datasets[f'tgt-{tgt}'] = CHESChallengeDataset(*tgt_data, target_byte=args.target_byte)
         
         return tgt_datasets
     else:

@@ -18,79 +18,6 @@ from metrics import *
 from utils import *
 
 
-def train_one_epoch(attack_model, dataloader, optimizer, scheduler=None):
-    attack_model.train()
-    iter_source = iter(dataloader)
-    num_iter = len(dataloader)
-    cls_losses, mmd_losses = 0.0, 0.0
-    total_loss = 0.
-    
-    for i in range(1, num_iter+1):
-        data = next(iter_source)
-        traces = data['norm_trace'].cuda().float()
-        labels = data['label'].cuda().long()
-        optimizer.zero_grad()
-        _, mmd_loss, ce_loss = attack_model(traces, labels, add_uncertainty=True)
-        loss = ce_loss + mmd_loss
-
-        loss.backward()
-        total_loss += loss.item()
-        cls_losses += ce_loss.item()
-        if type(mmd_loss) != float:
-            mmd_losses += mmd_loss.item()
-        optimizer.step()
-
-        if scheduler is not None:
-            scheduler.step()
-    
-    total_loss /= (i+1)
-    cls_losses /= (i+1)
-    mmd_losses /= (i+1)
-    # if scheduler is not None:    
-        # logging.info(f'\tcurrent_lr: {str(scheduler.get_last_lr()[0])}')
-    return total_loss, cls_losses, mmd_losses
-    
-
-def evaluate(attack_model, valid_dataloader, add_uncertainty=False):
-    with torch.no_grad():
-        attack_model.eval()
-        running_vloss = 0.0
-        cls_losses, mmd_losses = 0.0, 0.0
-        vpredictions_stat = []
-        vlabels_stat = []
-        probabilities = []
-        
-        for i, vdata in enumerate(valid_dataloader):
-            vtraces = vdata['norm_trace'].cuda().float()
-            vlabels = vdata['label'].cuda().long()
-
-            voutputs, mmd_loss, ce_loss = attack_model(vtraces, vlabels, add_uncertainty)
-            cls_losses += ce_loss.item()
-            if type(mmd_loss) != float:
-                mmd_losses += mmd_loss.item()
-            vloss = ce_loss + mmd_loss
-            running_vloss += vloss.item()
-
-            vpreds = voutputs.argmax(dim=-1).view(-1).tolist()
-            vpredictions_stat.extend(vpreds)
-            vlabels_stat.extend(vlabels.view(-1).tolist())
-            entropy = torch.nn.functional.softmax(voutputs, dim=1).detach().cpu()
-            probabilities.extend(entropy)
-    
-        avg_vloss = running_vloss / (i+1)
-        cls_losses /= (i+1)
-        mmd_losses /= (i+1)
-        accuracy = sum([1 for m, n in zip(vpredictions_stat, vlabels_stat) if m==n])/len(vlabels_stat)
-    
-    return {
-        'model_output': vpredictions_stat,
-        'labels': vlabels_stat,
-        'loss': avg_vloss,
-        'assist_loss': (cls_losses, mmd_losses),
-        'accuracy': accuracy,
-        'entropy': np.stack(probabilities)
-    }
-
 def setup_logging(log_dir):
     for handler in logging.root.handlers[:]:
         logging.root.removeHandler(handler)
@@ -102,14 +29,83 @@ def setup_logging(log_dir):
         format='%(message)s',
         filemode='a')
 
+def train_one_epoch(attack_model, dataloader, optimizer, scheduler=None):
+    attack_model.train()
+    iter_source = iter(dataloader)
+    num_iter = len(dataloader)
+    cls_losses, aux_losses = 0.0, 0.0
+    total_loss = 0.
+    
+    for i in range(1, num_iter+1):
+        data = next(iter_source)
+        traces = data['norm_trace'].cuda().float()
+        labels = data['label'].cuda().long()
+        optimizer.zero_grad()
+        _, aux_loss, ce_loss = attack_model(traces, labels, add_uncertainty=True)
+        loss = ce_loss + aux_loss
+
+        loss.backward()
+        total_loss += loss.item()
+        cls_losses += ce_loss.item()
+        if type(aux_loss) != float:
+            aux_losses += aux_loss.item()
+        optimizer.step()
+
+        if scheduler is not None:
+            scheduler.step()
+    
+    total_loss /= (i+1)
+    cls_losses /= (i+1)
+    aux_losses /= (i+1)
+
+    return total_loss, cls_losses, aux_losses
+    
+
+def evaluate(attack_model, valid_dataloader, add_uncertainty=False):
+    with torch.no_grad():
+        attack_model.eval()
+        running_vloss = 0.0
+        cls_losses, aux_losses = 0.0, 0.0
+        vpredictions_stat = []
+        vlabels_stat = []
+        probabilities = []
+        
+        for i, vdata in enumerate(valid_dataloader):
+            vtraces = vdata['norm_trace'].cuda().float()
+            vlabels = vdata['label'].cuda().long()
+
+            voutputs, aux_loss, ce_loss = attack_model(vtraces, vlabels, add_uncertainty)
+            cls_losses += ce_loss.item()
+            if type(aux_loss) != float:
+                aux_losses += aux_loss.item()
+            vloss = ce_loss + aux_loss
+            running_vloss += vloss.item()
+
+            vpreds = voutputs.argmax(dim=-1).view(-1).tolist()
+            vpredictions_stat.extend(vpreds)
+            vlabels_stat.extend(vlabels.view(-1).tolist())
+            entropy = torch.nn.functional.softmax(voutputs, dim=1).detach().cpu()
+            probabilities.extend(entropy)
+    
+        avg_vloss = running_vloss / (i+1)
+        cls_losses /= (i+1)
+        aux_losses /= (i+1)
+        accuracy = sum([1 for m, n in zip(vpredictions_stat, vlabels_stat) if m==n])/len(vlabels_stat)
+    
+    return {
+        'model_output': vpredictions_stat,
+        'labels': vlabels_stat,
+        'loss': avg_vloss,
+        'assist_loss': (cls_losses, aux_losses),
+        'accuracy': accuracy,
+        'entropy': np.stack(probabilities)
+    }
+
 def profile(training_args):
     s = training_args.seed
     set_seed(s)
 
-    # ==================== TRAIN PHASE ====================
-    # Only the Profiling_traces data is loaded: 100k traces for training and
-    # 10k traces for validation. No target data is loaded during training,
-    # which keeps memory usage low.
+    # load profiling data
     load_func = data_util.DATA_TYPE[training_args.data]
     src_train_data, src_val_data = load_func(training_args, mode='train')
 
@@ -139,9 +135,8 @@ def profile(training_args):
             factor=int(training_args.factor),
             dropout=float(training_args.dropout)
         ).cuda()
-    print(attack_model)
-    bs = int(config.kwargs['batch_size'])
 
+    bs = int(config.kwargs['batch_size'])
     src_train_loader = DataLoader(src_train_data, batch_size=bs, shuffle=True, num_workers=4)
     src_val_loader = DataLoader(src_val_data, batch_size=bs, shuffle=False, num_workers=4) 
 
@@ -167,22 +162,21 @@ def profile(training_args):
     best_loss = 1000.
 
     for epoch in pbar:
-        train_loss, cls_loss, diff_loss = train_one_epoch(attack_model, src_train_loader, optimizer, scheduler)
-        epoch_info = {'train_loss': train_loss, 'cls': cls_loss, 'diff': diff_loss}
-        print_info = f'Epoch {epoch}/{num_epoch}. Train loss={round(train_loss, 5)}, assist loss=({round(cls_loss, 5), round(diff_loss, 5)}).'
+        train_loss, cls_loss, aux_loss = train_one_epoch(attack_model, src_train_loader, optimizer, scheduler)
+        print_info = f'Epoch {epoch}/{num_epoch}. Train loss={round(train_loss, 5)}, assist loss=({round(cls_loss, 5), round(aux_loss, 5)}).'
 
+        # evaluate per training epoch
         evaluate_output = evaluate(attack_model, src_val_loader, add_uncertainty=True)
         valid_loss = evaluate_output['loss']
         assist_loss = [round(i, 5) for i in evaluate_output['assist_loss']]
         accuracy = evaluate_output['accuracy']
-        epoch_info['eval loss'] = valid_loss
-        epoch_info['accuracy'] = accuracy
         print_info += f'Eval loss: {round(valid_loss, 5)}, acc: {round(accuracy, 5)} assist loss={assist_loss}.'
         pbar.set_description(print_info)
         print_info += '\n'
 
         logging.info(print_info)
 
+        # save model if achieve better validation loss
         better = valid_loss < best_loss
         if better:
             best_loss = valid_loss
@@ -191,11 +185,11 @@ def profile(training_args):
         else:
             counter += 1
         
-        if counter > 10:
+        if counter > 10: # early stopping, good for avoid overfitting!
             break
 
     # ============ RELEASE TRAIN-PHASE DATA MEMORY ============
-    # logging.info('Training finished. Releasing training data memory...')
+    logging.info('Training finished. Releasing training data memory...')
     del src_train_data, src_val_data, src_train_loader, src_val_loader
     del attack_model, optimizer, scheduler, pbar
     gc.collect()
@@ -222,20 +216,17 @@ def attack(args):
     print_info=f"\nperturbation={args.perturbation}, position={args.augment_position}, uncertainty={args.uncertainty}, factor={args.factor}, dropout={args.dropout}, noise_level={args.noise_level}, dense_type={args.dense_type}\n"
     print_info += f"--------------Attack Results------------\n"
     targets = args.targets.split(',')
-    attack_results = {}
     config = None
     attack_model= None
     for tgt in targets:
         logging.info(f'[Attack] loading target {tgt} data...')
         args.targets = tgt
-        if args.data == 'ches_challenge':
-            tgt_datasets = load_func(args, mode='test', tgts=[tgt], n_test=100_000)
-        else:
-            tgt_datasets = load_func(args, mode='test')
+        tgt_datasets = load_func(args, mode='test')
 
         for tgt_name, tgt_data in tgt_datasets.items():
             tgt_data.apply_preprocess(test_preprocess)
 
+            # only load attack model once
             if config is None:
                 sample_length = len(tgt_data[0]['norm_trace'])
                 config = ConvConfig.from_config_file(args.config_file, length=sample_length)
@@ -261,15 +252,14 @@ def attack(args):
                         dropout=float(args.dropout)
                         ).cuda()
                 attack_model.load_state_dict(torch.load(model_path))
+            
             bs = int(config.kwargs['batch_size'])
-
             tgt_loader = DataLoader(tgt_data, batch_size=bs, shuffle=False, num_workers=4)
 
             tgt_eval = evaluate(attack_model, tgt_loader)
-            metrics = compute_metrics(tgt_eval, tgt_data, nb_attack, nb_trace, compute_ge=True)
+            metrics = compute_metrics(tgt_eval, tgt_data, nb_attack, nb_trace)
             NTGE = metrics['trace_needed']
-            attack_results[tgt_name] = {'loss': tgt_eval['assist_loss'][0], 'acc': tgt_eval['accuracy'], 'ntge': NTGE}
-            print_info += f"(tgt device){tgt_name}: loss={round(tgt_eval['assist_loss'][0], 4)}, acc={tgt_eval['accuracy']}, NTGE={NTGE}.\n"
+            print_info += f"(tgt device){tgt_name}: loss={round(tgt_eval['assist_loss'][0], 4)}, acc={tgt_eval['accuracy']}, NTGE (avg, max)={NTGE}.\n"
             logging.info(print_info)
             print_info = ''
 
@@ -279,7 +269,6 @@ def attack(args):
             gc.collect()
             torch.cuda.empty_cache()
 
-    return attack_results
 
 
 if __name__ == "__main__":
