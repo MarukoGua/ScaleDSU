@@ -27,29 +27,17 @@ def compute_metrics(evaluate_output, dataset, nb_attack, nb_trace, compute_ge=Tr
         nb_trace = predictions.shape[0]
     all_rk_evol = np.zeros((nb_attack, nb_trace))
     
-    if dataset.name == 'chesctf':
-        real_key = dataset.real_key
-        nb_hyp = 256
-    else:
-        target_byte = dataset.target_byte
-        real_key = dataset.meta[0]['key'][target_byte]
-        nb_hyp = predictions.shape[1]
+
+    target_byte = dataset.target_byte
+    real_key = dataset.meta[0]['key'][target_byte]
+    nb_hyp = predictions.shape[1]
     
-    if nb_attack>1:
-        bar = tqdm.tqdm(range(nb_attack), total=nb_attack)
-    else:
-        bar = range(nb_attack)
-    
+    bar = tqdm.tqdm(range(nb_attack), total=nb_attack)
     for i in bar:
         indices = np.random.choice(np.arange(predictions.shape[0]), size=nb_trace, replace=False)
         _sample = predictions[indices, :]
         labels = dataset.generate_labels_metric(indices, nb_hyp)
         rank_evol = _sample[np.arange(nb_trace)[:, None], labels]
-        # rank_evol = np.zeros((len(indices), nb_hyp))
-        # for j in range(nb_hyp):
-        #     index = labels[:, j]
-        #     probas = _sample[np.arange(len(_sample)), index]
-        #     rank_evol[:, j] = probas
         rank_evol = np.log(rank_evol + 1e-10)
         rank_evol = np.cumsum(rank_evol, axis=0)
         key_prob = rank_evol[:, real_key]
